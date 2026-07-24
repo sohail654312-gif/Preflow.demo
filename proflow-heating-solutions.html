@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pro-Flow Heating Solutions | Plumbing, Heating & Bathroom Renovations Birmingham</title>
+<meta name="description" content="Pro-Flow Heating Solutions — Gas Safe registered plumbing, heating, and bathroom renovation specialists in Small Heath, Birmingham. 5-star rated on Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --copper: #b5652d;
+    --copper-light: #d68a4c;
+    --espresso: #2b1d14;
+    --espresso-2: #3d2a1c;
+    --parchment: #f4ead9;
+    --parchment-2: #ece0cb;
+    --ink: #2a1f16;
+    --rust: #8a3b1f;
+    --brass: #c9a04f;
+    --line: rgba(43,29,20,0.14);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Space Grotesk', sans-serif;
+    color:var(--ink);
+    background:var(--parchment);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    color:var(--espresso);
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+  .eyebrow{
+    text-transform:uppercase; letter-spacing:0.18em; font-size:12px;
+    color:var(--rust); font-weight:600; margin-bottom:10px; display:block;
+  }
+
+  /* pipe divider signature element */
+  .pipe-divider{
+    position:relative; height:26px; margin:0; width:100%;
+    background:linear-gradient(180deg, var(--brass) 0%, var(--copper) 45%, var(--rust) 100%);
+    box-shadow: inset 0 2px 4px rgba(255,255,255,0.35), inset 0 -3px 6px rgba(0,0,0,0.35);
+  }
+  .pipe-divider::before, .pipe-divider::after{
+    content:""; position:absolute; top:50%; transform:translateY(-50%);
+    width:14px; height:38px; background:var(--espresso-2);
+    border:3px solid var(--brass); border-radius:3px;
+  }
+  .pipe-divider::before{ left:6%; }
+  .pipe-divider::after{ left:auto; right:6%; }
+
+  /* HEADER */
+  header{
+    background:var(--espresso); color:var(--parchment);
+    position:sticky; top:0; z-index:50; border-bottom:3px solid var(--copper);
+  }
+  .header-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 24px;
+  }
+  .logo{
+    font-family:'Fraunces', serif; font-weight:700; font-size:22px; color:var(--parchment);
+    display:flex; align-items:center; gap:10px;
+  }
+  .logo .mark{
+    width:38px; height:38px; border-radius:50%;
+    background:conic-gradient(from 220deg, var(--brass), var(--copper), var(--rust), var(--brass));
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Space Grotesk',sans-serif; font-weight:700; color:var(--espresso); font-size:13px;
+  }
+  nav ul{list-style:none; display:flex; gap:28px;}
+  nav a{font-size:14.5px; font-weight:500; color:var(--parchment-2); transition:color .2s;}
+  nav a:hover{color:var(--brass);}
+  .nav-cta{
+    background:var(--copper); color:#fff !important; padding:10px 20px;
+    border-radius:4px; font-weight:600; font-size:14.5px;
+  }
+  .nav-toggle{display:none; background:none; border:none; color:var(--parchment); font-size:26px; cursor:pointer;}
+  @media (max-width:860px){
+    nav ul{
+      position:absolute; top:100%; left:0; right:0; background:var(--espresso);
+      flex-direction:column; padding:10px 24px 20px; gap:14px; display:none; border-bottom:3px solid var(--copper);
+    }
+    nav ul.open{display:flex;}
+    .nav-toggle{display:block;}
+    .nav-cta{display:none;}
+  }
+
+  /* HERO */
+  .hero{
+    background:
+      radial-gradient(ellipse at 75% 20%, rgba(197,132,63,0.35), transparent 55%),
+      linear-gradient(180deg, var(--espresso) 0%, var(--espresso-2) 100%);
+    color:var(--parchment); padding:76px 0 64px; position:relative;
+  }
+  .hero-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:center;}
+  @media (max-width:900px){ .hero-grid{grid-template-columns:1fr;} }
+  .hero h1{ font-size:clamp(34px,5vw,54px); line-height:1.05; color:#fff; margin-bottom:18px;}
+  .hero h1 em{ font-style:normal; color:var(--brass); }
+  .hero p.lead{ font-size:17px; color:var(--parchment-2); max-width:520px; margin-bottom:28px;}
+  .btn-row{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:30px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:15px 26px; border-radius:4px; font-weight:600; font-size:15px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-primary{ background:var(--copper); color:#fff; box-shadow:0 6px 0 var(--rust);}
+  .btn-primary:hover{ transform:translateY(-2px); }
+  .btn-outline{ border:1.5px solid var(--parchment-2); color:var(--parchment); }
+  .btn-outline:hover{ background:rgba(244,234,217,0.08); }
+  .badge-5star{
+    display:inline-flex; align-items:center; gap:8px; background:rgba(244,234,217,0.08);
+    border:1px solid var(--line); border-color:rgba(244,234,217,0.25);
+    padding:8px 14px; border-radius:30px; font-size:13.5px; color:var(--brass); font-weight:600;
+  }
+  .hero-visual{
+    background:var(--parchment); border-radius:8px; padding:28px;
+    border:2px solid var(--copper); position:relative; box-shadow:0 20px 40px rgba(0,0,0,0.35);
+  }
+  .hero-visual .tag{
+    position:absolute; top:-16px; right:20px; background:var(--rust); color:#fff;
+    padding:8px 16px; border-radius:30px; font-size:13px; font-weight:700; letter-spacing:0.03em;
+  }
+  .hero-stats{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:8px;}
+  .hero-stat{ text-align:center; padding:14px 8px; border-radius:6px; background:var(--parchment-2);}
+  .hero-stat .num{ font-family:'Fraunces',serif; font-size:26px; font-weight:700; color:var(--rust);}
+  .hero-stat .lbl{ font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--espresso-2);}
+
+  /* SECTION GENERIC */
+  section{ padding:72px 0; }
+  .section-head{ max-width:640px; margin-bottom:40px; }
+  .section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+  .section-head h2{ font-size:clamp(26px,3.4vw,36px); }
+  .section-head p{ color:var(--espresso-2); opacity:.85; margin-top:12px; font-size:15.5px;}
+
+  /* TRUST STRIP */
+  .trust-strip{ background:var(--parchment-2); padding:22px 0; }
+  .trust-row{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; }
+  .trust-item{ display:flex; align-items:center; gap:10px; font-size:14px; font-weight:600; color:var(--espresso-2); }
+  .trust-item .dot{ width:8px; height:8px; border-radius:50%; background:var(--copper); }
+
+  /* HOW IT WORKS */
+  .steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+  @media (max-width:900px){ .steps{grid-template-columns:1fr 1fr;} }
+  @media (max-width:560px){ .steps{grid-template-columns:1fr;} }
+  .step{ background:#fff; border:1px solid var(--line); border-radius:8px; padding:26px 22px; position:relative; }
+  .step .n{
+    font-family:'Fraunces',serif; font-size:34px; font-weight:700; color:var(--copper);
+    opacity:.55; margin-bottom:8px;
+  }
+  .step h4{ font-size:17px; margin-bottom:6px; }
+  .step p{ font-size:14px; color:var(--espresso-2); opacity:.85; }
+
+  /* ABOUT */
+  .about{ background:var(--espresso); color:var(--parchment); }
+  .about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
+  @media (max-width:900px){ .about-grid{grid-template-columns:1fr;} }
+  .about h2{ color:#fff; }
+  .about p{ color:var(--parchment-2); font-size:15.5px; margin-bottom:16px; opacity:.9;}
+  .about-cred{ display:flex; gap:14px; margin-top:22px; flex-wrap:wrap;}
+  .cred-pill{ background:rgba(244,234,217,0.08); border:1px solid rgba(244,234,217,0.2); padding:8px 14px; border-radius:6px; font-size:13px;}
+  .about-visual{
+    aspect-ratio:4/3; border-radius:8px; border:2px solid var(--copper);
+    background:linear-gradient(135deg, var(--espresso-2), var(--rust));
+    display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;
+  }
+  .about-visual::before{
+    content:"PF"; font-family:'Fraunces',serif; font-size:80px; font-weight:700;
+    color:rgba(244,234,217,0.12);
+  }
+
+  /* SERVICES */
+  .services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  @media (max-width:900px){ .services-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:600px){ .services-grid{grid-template-columns:1fr;} }
+  .service-card{
+    background:#fff; border:1px solid var(--line); border-radius:8px; padding:26px;
+    transition:transform .18s ease, box-shadow .18s ease; border-top:3px solid var(--copper);
+  }
+  .service-card:hover{ transform:translateY(-4px); box-shadow:0 14px 28px rgba(43,29,20,0.12); }
+  .service-icon{
+    width:46px; height:46px; border-radius:8px; background:var(--parchment-2);
+    display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-size:20px;
+  }
+  .service-card h4{ font-size:17px; margin-bottom:8px; }
+  .service-card p{ font-size:14px; color:var(--espresso-2); opacity:.85; margin-bottom:12px;}
+  .service-card .link{ font-size:13.5px; font-weight:600; color:var(--rust); }
+
+  /* STATS BAND */
+  .stats-band{ background:var(--parchment-2); }
+  .stats-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:center; }
+  @media (max-width:700px){ .stats-row{grid-template-columns:1fr 1fr;} }
+  .stat-num{ font-family:'Fraunces',serif; font-size:40px; font-weight:700; color:var(--rust); }
+  .stat-lbl{ font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--espresso-2); margin-top:6px;}
+
+  /* TESTIMONIALS */
+  .testi-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  @media (max-width:900px){ .testi-grid{grid-template-columns:1fr;} }
+  .testi-card{ background:#fff; border:1px solid var(--line); border-radius:8px; padding:24px; }
+  .stars{ color:var(--brass); font-size:15px; letter-spacing:2px; margin-bottom:12px; }
+  .testi-card p{ font-size:14.5px; color:var(--ink); margin-bottom:14px; }
+  .testi-name{ font-size:13.5px; font-weight:700; color:var(--rust); }
+
+  /* FAQ */
+  .faq-item{ border-bottom:1px solid var(--line); }
+  .faq-q{
+    width:100%; text-align:left; background:none; border:none; padding:20px 0;
+    font-family:'Fraunces',serif; font-size:17px; font-weight:600; color:var(--espresso);
+    display:flex; justify-content:space-between; align-items:center; cursor:pointer;
+  }
+  .faq-q .icon{ font-size:20px; color:var(--copper); transition:transform .2s; }
+  .faq-a{ max-height:0; overflow:hidden; transition:max-height .25s ease; font-size:14.5px; color:var(--espresso-2); }
+  .faq-a p{ padding-bottom:18px; }
+  .faq-item.open .faq-q .icon{ transform:rotate(45deg); }
+  .faq-item.open .faq-a{ max-height:200px; }
+
+  /* CTA BAND */
+  .cta-band{
+    background:linear-gradient(120deg, var(--rust), var(--copper));
+    color:#fff; text-align:center; padding:64px 0;
+  }
+  .cta-band h2{ color:#fff; margin-bottom:14px; }
+  .cta-band p{ color:rgba(255,255,255,0.9); margin-bottom:26px; }
+  .cta-band .btn-primary{ background:var(--espresso); box-shadow:0 6px 0 rgba(0,0,0,0.4); }
+
+  /* FOOTER */
+  footer{ background:var(--espresso); color:var(--parchment-2); padding:56px 0 90px; }
+  .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1.2fr; gap:32px; }
+  @media (max-width:800px){ .footer-grid{grid-template-columns:1fr 1fr;} }
+  footer h5{ color:var(--brass); font-size:13px; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:14px;}
+  footer ul{ list-style:none; }
+  footer li{ margin-bottom:8px; font-size:14px; }
+  footer a:hover{ color:var(--brass); }
+  .footer-bottom{ border-top:1px solid rgba(244,234,217,0.15); margin-top:40px; padding-top:20px; font-size:13px; text-align:center; color:rgba(244,234,217,0.55); }
+
+  /* STICKY MOBILE CALL BAR */
+  .sticky-call{
+    position:fixed; bottom:0; left:0; right:0; z-index:60;
+    background:var(--espresso); border-top:2px solid var(--copper);
+    display:none; padding:12px 20px; justify-content:center;
+  }
+  .sticky-call a{
+    background:var(--copper); color:#fff; padding:12px 24px; border-radius:30px;
+    font-weight:700; font-size:15px; display:flex; align-items:center; gap:8px;
+  }
+  @media (max-width:700px){ .sticky-call{display:flex;} body{padding-bottom:70px;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner wrap" style="max-width:1180px;">
+    <div class="logo"><span class="mark">PF</span>Pro-Flow Heating Solutions</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+    <nav>
+      <ul id="navMenu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a class="nav-cta" href="tel:+447858893212">Call Now — Available 24/7</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge-5star">&#9733;&#9733;&#9733;&#9733;&#9733; 5.0 Rated on Google Reviews</span>
+      <h1 style="margin-top:18px;">Bathrooms, heating &amp; plumbing <em>done properly, first time.</em></h1>
+      <p class="lead">Pro-Flow Heating Solutions is a Gas Safe registered plumbing and heating team based in Small Heath, Birmingham — trusted for bathroom renovations, tiling, boiler work, and reliable emergency call-outs.</p>
+      <div class="btn-row">
+        <a href="tel:+447858893212" class="btn btn-primary">&#128222; Call Now — Available 24/7</a>
+        <a href="#services" class="btn btn-outline">See Our Services</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <span class="tag">Same-Day Response</span>
+      <div style="width:100%;">
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="num">5.0&#9733;</div><div class="lbl">Google Rating</div></div>
+          <div class="hero-stat"><div class="num">24/7</div><div class="lbl">Call-Out Line</div></div>
+          <div class="hero-stat"><div class="num">100%</div><div class="lbl">Gas Safe Registered</div></div>
+          <div class="hero-stat"><div class="num">Small Heath</div><div class="lbl">Birmingham Based</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pipe-divider"></div>
+
+<div class="trust-strip">
+  <div class="wrap trust-row">
+    <div class="trust-item"><span class="dot"></span> Gas Safe Registered</div>
+    <div class="trust-item"><span class="dot"></span> WaterSafe Approved</div>
+    <div class="trust-item"><span class="dot"></span> Fully Insured Engineers</div>
+    <div class="trust-item"><span class="dot"></span> 12-Month Workmanship Guarantee</div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">How It Works</span>
+      <h2>Emergency plumbing, without the emergency stress</h2>
+      <p>A simple, no-surprises process from the first call to the finished job.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h4>Call or message</h4><p>Reach our 24-hour line any time — no call centre queues, straight to a real engineer.</p></div>
+      <div class="step"><div class="n">02</div><h4>Get a fixed quote</h4><p>We diagnose the issue and confirm price before any work starts. No surprise invoices.</p></div>
+      <div class="step"><div class="n">03</div><h4>Fast dispatch</h4><p>A certified engineer is on the way, typically arriving within 45–60 minutes.</p></div>
+      <div class="step"><div class="n">04</div><h4>Job done properly</h4><p>Repairs completed to standard, tidied up, and backed by our 12-month guarantee.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <span class="eyebrow" style="color:var(--brass);">About Us</span>
+      <h2>Birmingham's trusted plumbing &amp; heating specialists</h2>
+      <p>Pro-Flow Heating Solutions Ltd is based in Small Heath, Birmingham, carrying out plumbing, heating, and bathroom renovation work across the city. Customers consistently mention the same things in their reviews: reliable, professional, and clear communication from start to finish.</p>
+      <p>Whether it's a full bathroom renovation, self-levelling and tiling, or a boiler and heating job, every project is handled by the same small, accountable team — no subcontractor guesswork.</p>
+      <div class="about-cred">
+        <span class="cred-pill">Gas Safe Registered</span>
+        <span class="cred-pill">Company No. 15707790</span>
+        <span class="cred-pill">Fully Insured</span>
+        <span class="cred-pill">5.0&#9733; on Google</span>
+      </div>
+    </div>
+    <div class="about-visual"></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">What We Fix</span>
+      <h2>Plumbing services across Birmingham</h2>
+      <p>From routine repairs to full emergencies, one call covers it all.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">&#128704;</div><h4>Bathroom Renovations</h4><p>Full bathroom strip-outs and renovations, finished to a high standard, start to finish.</p><span class="link">Learn more &#8594;</span></div>
+      <div class="service-card"><div class="service-icon">&#128295;</div><h4>Self-Levelling &amp; Tiling</h4><p>Floor preparation and tiling work carried out cleanly and efficiently.</p><span class="link">Learn more &#8594;</span></div>
+      <div class="service-card"><div class="service-icon">&#128293;</div><h4>Boilers &amp; Heating</h4><p>Boiler repairs, servicing, and heating system installations by Gas Safe engineers.</p><span class="link">Learn more &#8594;</span></div>
+      <div class="service-card"><div class="service-icon">&#128167;</div><h4>General Plumbing</h4><p>Taps, valves, radiators, and leak repairs handled quickly and properly.</p><span class="link">Learn more &#8594;</span></div>
+      <div class="service-card"><div class="service-icon">&#127981;</div><h4>Blocked Drains</h4><p>Fast clearance for blocked or slow-running drains, indoors and out.</p><span class="link">Learn more &#8594;</span></div>
+      <div class="service-card"><div class="service-icon">&#127970;</div><h4>Landlord &amp; Commercial Work</h4><p>Compliance checks, maintenance, and priority call-outs for landlords and letting agents.</p><span class="link">Learn more &#8594;</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="pipe-divider"></div>
+
+<div class="stats-band">
+  <div class="wrap" style="padding:48px 0;">
+    <div class="stats-row">
+      <div><div class="stat-num">5.0&#9733;</div><div class="stat-lbl">Google Rating</div></div>
+      <div><div class="stat-num">24/7</div><div class="stat-lbl">Call-Out Availability</div></div>
+      <div><div class="stat-num">100%</div><div class="stat-lbl">Gas Safe Registered</div></div>
+      <div><div class="stat-num">2024</div><div class="stat-lbl">Established</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Google Reviews</span>
+      <h2>5.0&#9733; rated by Birmingham customers</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Our bathroom renovation was handled from start to finish by a reliable, professional team who were always available to answer our questions. Really pleased with the result."</p><div class="testi-name">— Kam P., Google Review</div></div>
+      <div class="testi-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"We used Pro-Flow for self-levelling and tiling work. Efficient, professional, and clear communication throughout — the finish was to a high standard."</p><div class="testi-name">— Jas Hayre, Google Review</div></div>
+      <div class="testi-card" style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p style="margin-bottom:6px;">5.0 out of 5 on Google</p><span class="link" style="color:var(--rust); font-weight:700;">Read all reviews on Google &#8594;</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:var(--parchment-2);">
+  <div class="wrap" style="max-width:820px;">
+    <div class="section-head center">
+      <span class="eyebrow">Questions</span>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Are you available at night and on weekends?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Yes — we operate a genuine 24/7 line, including bank holidays, with no out-of-hours surcharge surprises.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you give a price before starting work?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Always. You'll get a fixed quote after diagnosis, before any work begins.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Are your engineers certified?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Yes, all engineers are Gas Safe registered, WaterSafe approved, fully insured, and background-checked.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you work with landlords and letting agents?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Yes, we support landlords and letting agents with compliance checks, maintenance contracts, and priority tenant call-outs.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="wrap">
+    <h2>Need a plumber right now?</h2>
+    <p>Our line is open 24 hours a day, 7 days a week across Birmingham.</p>
+    <a href="tel:+447858893212" class="btn btn-primary">&#128222; Call Now — Available 24/7</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <div class="logo" style="margin-bottom:14px;"><span class="mark">PF</span>Pro-Flow Heating Solutions</div>
+      <p style="font-size:14px; opacity:.75; max-width:280px;">Round-the-clock emergency plumbing across Birmingham. Fixed pricing, certified engineers, no surprises.</p>
+    </div>
+    <div>
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Coverage</h5>
+      <ul>
+        <li>Small Heath</li>
+        <li>Birmingham City Centre</li>
+        <li>Solihull</li>
+        <li>Greater Birmingham</li>
+      </ul>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <ul>
+        <li>+44 7858 893212</li>
+        <li>hello@proflowheatingsolutions.co.uk</li>
+        <li>137 Aubrey Road, Small Heath,<br>Birmingham, England, B10 9DJ</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Proflow Heating Solutions Ltd. Company No. 15707790. All rights reserved.</div>
+</footer>
+
+<div class="sticky-call">
+  <a href="tel:+447858893212">&#128222; Call Now — Available 24/7</a>
+</div>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function(){
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.parentElement;
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+      if(!wasOpen){ item.classList.add('open'); }
+    });
+  });
+</script>
+</body>
+</html>
